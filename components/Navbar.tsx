@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoLoader from "@/assets/svg/Logo.svg";
 import NavLinks from "./NavLinks";
 
 function Navbar() {
   return (
-    <div className="border-b border-b-box-300">
-      <nav className="mx-auto max-w-[1280px] py-7 flex justify-between">
+    <div className="border-b border-b-box-300 fixed top-0 left-0 w-full bg-white">
+      <nav className="mx-auto max-w-[1280px] h-nav flex items-center justify-between">
         <Link href="/">
-          <Image alt="Logo" src={logoLoader} />
+          <Image alt="Logo" src="/Logo.svg" width={130} height={0} />
         </Link>
         <NavLinks />
       </nav>

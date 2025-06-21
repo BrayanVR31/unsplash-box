@@ -9,5 +9,22 @@
   --color-box-400: #6c727f;
   --color-box-500: #121826;
   /** Brand font family */
-  --font-vietnam: "Be Vietnam Pro", sans-serif;
+  --font-vietnam: "Be Vietnam Pro", "sans-serif";
+  /** Brand spacing */
+  --spacing-nav: 80px;
+  --spacing-content: calc(100vh - var(--spacing-nav));
+  --text-description: 14px;
+  --min-size: calc(var(--spacing-content) / 16);
+}
+
+@layer components {
+  .bg-hero {
+    background-image: url("/hero-left.png"), url("/hero-right.png");
+    background-position:
+      0% calc(var(--spacing-nav) + var(--min-size)),
+      100% calc(var(--spacing-nav) + var(--min-size));
+    background-size:
+      auto 479px,
+      auto 479px;
+  }
 }
